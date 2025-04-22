@@ -23,6 +23,6 @@
 		= <&pro_micro 18 GPIO_ACTIVE_HIGH>  // GP29 (R1)
     	, <&pro_micro 5  GPIO_ACTIVE_HIGH>  // GP26 (R2)
     	, <&pro_micro 4  GPIO_ACTIVE_HIGH>  // GP5  (R3)
-    	//, <&pro_micro 9  GPIO_ACTIVE_HIGH>; // GP4  (R4)
+    	, <&pro_micro 9  GPIO_ACTIVE_HIGH>; // GP4  (R4)
 		;
 };
