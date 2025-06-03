@@ -20,6 +20,10 @@
 #define SCR 5
 #define SNI 6
 
+#define HM_TAPPING_TERM 225
+#define HM_TAPPING_TERM_FAST 175
+#define HM_PRIOR_IDLE 175
+
 // Layer-Tap and Mod-Tap Config Preferences
 &lt {
     tapping-term-ms = <240>;
