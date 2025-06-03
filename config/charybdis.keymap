@@ -128,7 +128,7 @@
             &kp Q              &kp W                &kp F             &kp P             &kp B               &kp J                &kp L             &kp U           &kp Y       &kp APOS
             &mt LEFT_SHIFT A   &mt LEFT_CONTROL R   &mt LEFT_ALT S    &mt LEFT_GUI T    &kp G               &kp M                &kp N             &kp E           &kp I       &kp O
             &kp Z              &kp X                &kp C             &kp D             &kp V               &kp K                &kp H             &kp COMMA       &kp DOT     &kp SLASH
-                                                    &mo MOU           &kp SPACE         &lt NAV TAB         &lt SMN BACKSPACE    &Shift_Enter RIGHT_SHIFT ENTER
+                                                    &kp ENTER         &kp SPACE         &lt NAV TAB         &lt SMN BACKSPACE    &Shift_Enter RIGHT_SHIFT ENTER &kp SPACE
             >;
         };
 
@@ -138,7 +138,7 @@
             &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)           &kp LG(N5)   &kp PRINTSCREEN  &kp BACKSPACE     &kp ENTER          &kp DELETE    &trans
             &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)           &kp LG(N0)   &kp ENTER        &kp LEFT          &kp DOWN           &kp UP_ARROW  &kp RIGHT
             &kp LC(Z)   &kp LC(X)   &kp LC(C)   &mt LC(LS(V)) LC(V)  &kp LC(Y)    &trans           &kp LC(LS(LEFT))  &kp LS(LC(RIGHT))  &trans        &trans
-                                            &trans         &trans    &trans       &lt FUN BACKSPACE  &kp LSHFT
+                                            &trans         &trans    &trans       &lt FUN BACKSPACE  &kp LSHFT &trans
             >;
         };
 
@@ -148,7 +148,7 @@
             &kp LBRC   &kp AMPERSAND  &kp STAR    &kp LPAR  &kp RBRC      &kp MINUS &kp N7  &kp N8  &kp N9  &kp N0
             &kp COLON  &kp DOLLAR     &kp PERCENT &kp CARET &kp PLUS      &kp SEMI  &kp N4  &kp N5  &kp N6  &kp EQUAL
             &kp TILDE  &kp EXCL       &kp AT      &kp POUND &kp PIPE      &kp GRAVE &kp N1  &kp N2  &kp N3  &kp BSLH
-                            &kp RPAR  &kp LPAR    &kp UNDER               &trans    &trans
+                            &kp RPAR  &kp LPAR    &kp UNDER               &trans    &trans &trans
             >;
         };
 
@@ -158,7 +158,7 @@
             &kp ESC  &kp F1  &kp F2  &kp F3  &kp F10    &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4
             &kp F12  &kp F4  &kp F5  &kp F6  &kp F11    &out OUT_TOG  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &bt BT_CLR
             &trans   &kp F7  &kp F8  &kp F9  &kp F12    &trans        &trans            &trans             &trans           &trans
-                                &trans &trans &trans    &trans        &trans
+                                &trans &trans &trans    &trans        &trans &trans
             >;
         };
 
@@ -168,7 +168,7 @@
             &trans  &trans    &trans    &trans   &trans    &trans   &trans    &trans   &trans  &trans
             &trans  &trans    &trans    &trans   &trans    &trans   &mkp MB1  &mkp MB2 &trans  &trans
             &trans  &mo SCR   &mo SNI   &trans   &trans    &trans   &trans    &trans   &trans  &trans
-                                &trans    &trans    &trans   &trans    &trans
+                                &trans    &trans    &trans   &trans    &trans &trans
             >;
         };
 
@@ -178,7 +178,7 @@
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans &trans
             >;
         };
         
@@ -188,7 +188,7 @@
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans &trans
             >;
         };
     };
