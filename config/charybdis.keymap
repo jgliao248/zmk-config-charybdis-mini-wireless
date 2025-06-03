@@ -57,6 +57,85 @@
             hold-trigger-key-positions = <34>;
             tapping-term-ms = <150>;
         };
+
+        hm_l: homerow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>,  <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+
+            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            hold-trigger-on-release;
+        };
+
+        hm_r: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+
+            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            hold-trigger-on-release;
+        };
+
+
+        // Positional Homerow mods for shift
+        // Use faster tapping term and disable some features that may
+        // cause false negatives.
+        hm_shift_l: hm_shift_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+
+            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            // hold-trigger-on-release;
+        };
+
+        hm_shift_r: hm_shift_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+
+            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            // hold-trigger-on-release;
+        };
+
+        /*
+         * Non-Positional Homerow Mods
+         * Used for &mm_grescm_gui behavior on left hand.
+         *
+         * Usage: &hm LSHFT T
+         * Tap: T
+         * Tap-Tap-Hold: Repeat T
+         * Hold: LSHIFT
+         */
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM>;
+            quick-tap-ms = <200>;
+        };
     };
     
     combos {
@@ -117,6 +196,7 @@
             bindings = <&caps_word>;
             key-positions = <14 15>;
         };
+
     };
 
     keymap {
@@ -125,12 +205,18 @@
         default_layer {
             display-name = "DEF";
             bindings = <
-            &kp Q              &kp W                &kp F             &kp P             &kp B               &kp J                &kp L             &kp U           &kp Y       &kp APOS
-            &mt LEFT_SHIFT A   &mt LEFT_CONTROL R   &mt LEFT_ALT S    &mt LEFT_GUI T    &kp G               &kp M                &kp N             &kp E           &kp I       &kp O
-            &kp Z              &kp X                &kp C             &kp D             &kp V               &kp K                &kp H             &kp COMMA       &kp DOT     &kp SLASH
-                                                    &kp ENTER         &kp SPACE         &lt NAV TAB         &lt SMN BACKSPACE    &Shift_Enter RIGHT_SHIFT ENTER &kp SPACE
+            &kp Q               &kp W               &hm_shift_l EQUAL E     &kp R                       &kp T                      &kp Y         &kp U                       &kp I                      &kp O                  &hm_r PRINTSCREEN P        
+            &hm_l LEFT_GUI A    &hm_l LEFT_ALT S    &hm_l LEFT_CONTROL D    &hm_shift_l LEFT_SHIFT F    &kp G                      &kp H         &hm_shift_r RIGHT_SHIFT J   &hm_r RIGHT_CONTROL K      &hm_r RIGHT_ALT L      &hm_r RIGHT_GUI SEMI       
+            &kp Z               &kp X               &kp C                   &kp V                       &kp B                      &kp N         &kp M                       &kphm_shift_r APOS COMMA   &hm_shift_r EXCL DOT   &hm_shift_r BACKSLASH FSLH  
+                                                    &lt FUN DELETE          &lt NAV TAB                 &hm_l LCTRL ENTER          &kp SPACE     &kp MINUS                   &lt SMN BACKSPACE       
+              
             >;
         };
+
+            //         &kp Q              &kp W                &kp F             &kp P             &kp B               &kp J                &kp L             &kp U           &kp Y       &kp APOS
+            // &mt LEFT_SHIFT A   &mt LEFT_CONTROL R   &mt LEFT_ALT S    &mt LEFT_GUI T    &kp G               &kp M                &kp N             &kp E           &kp I       &kp O
+            // &kp Z              &kp X                &kp C             &kp D             &kp V               &kp K                &kp H             &kp COMMA       &kp DOT     &kp SLASH
+            //                                         &kp ENTER         &kp SPACE         &lt NAV TAB         &lt SMN BACKSPACE    &Shift_Enter RIGHT_SHIFT ENTER &kp SPACE
 
         nav_layer {
             display-name = "NAV";
