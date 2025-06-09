@@ -19,7 +19,7 @@
 #define MOU 4
 #define SCR 5
 #define SNI 6
-//#define QWERTY 7
+#define QWERTY 7
 
 #define HM_TAPPING_TERM 225
 #define HM_TAPPING_TERM_FAST 175
@@ -202,10 +202,10 @@
             key-positions = <13 16>;
         };
 
-        // QwertyTog {
-        //     bindings = <&tog QWERTY>;
-        //     key-positions = <30 31 32>;
-        // };
+        QwertyTog {
+            bindings = <&tog QWERTY>;
+            key-positions = <30 31 32>;
+        };
 
     };
 
@@ -217,18 +217,10 @@
             bindings = <
                 &kp Q               &kp W           &kp F               &kp P               &kp G                       &kp J                &kp L              &kp U               &kp Y           &mt GRAVE APOS
                 &mt LEFT_GUI A      &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T    &kp D                       &kp H                &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E &mt RIGHT_ALT I &mt RIGHT_GUI O
-                &kp Z               &kp X           &kp C               &kp V               &kp B                       &kp K                &kp M              &kp SEMI COMMA      &mt COLON DOT   &kp SLASH
-                                                    &lt NAV TAB         &kp ENTER           &mt LEFT_CONTROL DEL        &lt SMN BACKSPACE    &kp SPACE          &kp MINUS   
-              
+                &kp Z               &kp X           &kp C               &kp V               &kp B                       &kp K                &kp M              &mt SEMI COMMA      &mt COLON DOT   &mt BSLH SLASH
+                                                    &lt NAV TAB         &kp ENTER           &mt LEFT_CONTROL DEL        &lt SMN BACKSPACE    &kp SPACE          &kp MINUS    
             >;
-        };
-
-                    // &kp Q               &kp W               &hm_shift_l EQUAL E     &kp R                       &kp T                      &kp Y         &kp U                       &kp I                      &kp O                  &hm_r PRINTSCREEN P        
-            // &hm_l LEFT_GUI A    &hm_l LEFT_ALT S    &hm_l LEFT_CONTROL D    &hm_shift_l LEFT_SHIFT F    &kp G                      &kp H         &hm_shift_r RIGHT_SHIFT J   &hm_r RIGHT_CONTROL K      &hm_r RIGHT_ALT L      &hm_r RIGHT_GUI SEMI       
-            // &kp Z               &kp X               &kp C                   &kp V                       &kp B                      &kp N         &kp M                       &hm_shift_r APOS COMMA     &hm_shift_r EXCL DOT   &hm_shift_r BACKSLASH FSLH  
-            //                                         &lt FUN DELETE          &lt NAV TAB                 &hm_l LCTRL ENTER          &kp SPACE     &kp MINUS                   &lt SMN BACKSPACE   
-
-                              
+        };             
 
         nav_layer {
             display-name = "NAV";
@@ -290,14 +282,14 @@
             >;
         };
 
-        // qwerty_layer {
-        //     display-name = "QWERTY";
-        //     bindings = <
-        //     &kp Q               &kp W               &hm_shift_l EQUAL E     &kp R                       &kp T                      &kp Y         &kp U                       &kp I                      &kp O                  &hm_r PRINTSCREEN P        
-        //     &hm_l LEFT_GUI A    &hm_l LEFT_ALT S    &hm_l LEFT_CONTROL D    &hm_shift_l LEFT_SHIFT F    &kp G                      &kp H         &hm_shift_r RIGHT_SHIFT J   &hm_r RIGHT_CONTROL K      &hm_r RIGHT_ALT L      &hm_r RIGHT_GUI SEMI       
-        //     &kp Z               &kp X               &kp C                   &kp V                       &kp B                      &kp N         &kp M                       &hm_shift_r APOS COMMA     &hm_shift_r EXCL DOT   &hm_shift_r BACKSLASH FSLH 
-        //                     &trans  &trans  &trans    &trans  &trans &trans
-        //     >;
-        // };
+        qwerty_layer {
+            display-name = "QWERTY";
+            bindings = <
+            &kp Q               &kp W               &hm_shift_l EQUAL E     &kp R                       &kp T                      &kp Y         &kp U                       &kp I                      &kp O                  &hm_r PRINTSCREEN P        
+            &hm_l LEFT_GUI A    &hm_l LEFT_ALT S    &hm_l LEFT_CONTROL D    &hm_shift_l LEFT_SHIFT F    &kp G                      &kp H         &hm_shift_r RIGHT_SHIFT J   &hm_r RIGHT_CONTROL K      &hm_r RIGHT_ALT L      &hm_r RIGHT_GUI SEMI       
+            &kp Z               &kp X               &kp C                   &kp V                       &kp B                      &kp N         &kp M                       &hm_shift_r APOS COMMA     &hm_shift_r EXCL DOT   &hm_shift_r BACKSLASH FSLH 
+                            &trans  &trans  &trans    &trans  &trans &trans
+            >;
+        };
     };
 };
