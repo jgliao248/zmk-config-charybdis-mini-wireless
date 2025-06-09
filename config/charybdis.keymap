@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
-// Layer Defenitions
+// Layer Definitions
 #define DEF 0
 #define NAV 1
 #define SMN 2
@@ -19,7 +19,7 @@
 #define MOU 4
 #define SCR 5
 #define SNI 6
-#define QWERTY 7
+//#define QWERTY 7
 
 #define HM_TAPPING_TERM 225
 #define HM_TAPPING_TERM_FAST 175
@@ -202,10 +202,10 @@
             key-positions = <13 16>;
         };
 
-        QwertyTog {
-            bindings = <&tog QWERTY>;
-            key-positions = <30 31 32>;
-        };
+        // QwertyTog {
+        //     bindings = <&tog QWERTY>;
+        //     key-positions = <30 31 32>;
+        // };
 
     };
 
@@ -290,14 +290,14 @@
             >;
         };
 
-        qwerty_layer {
-            display-name = "QWERTY";
-            bindings = <
-            &kp Q               &kp W               &hm_shift_l EQUAL E     &kp R                       &kp T                      &kp Y         &kp U                       &kp I                      &kp O                  &hm_r PRINTSCREEN P        
-            &hm_l LEFT_GUI A    &hm_l LEFT_ALT S    &hm_l LEFT_CONTROL D    &hm_shift_l LEFT_SHIFT F    &kp G                      &kp H         &hm_shift_r RIGHT_SHIFT J   &hm_r RIGHT_CONTROL K      &hm_r RIGHT_ALT L      &hm_r RIGHT_GUI SEMI       
-            &kp Z               &kp X               &kp C                   &kp V                       &kp B                      &kp N         &kp M                       &hm_shift_r APOS COMMA     &hm_shift_r EXCL DOT   &hm_shift_r BACKSLASH FSLH 
-                            &trans  &trans  &trans    &trans  &trans &trans
-            >;
-        };
+        // qwerty_layer {
+        //     display-name = "QWERTY";
+        //     bindings = <
+        //     &kp Q               &kp W               &hm_shift_l EQUAL E     &kp R                       &kp T                      &kp Y         &kp U                       &kp I                      &kp O                  &hm_r PRINTSCREEN P        
+        //     &hm_l LEFT_GUI A    &hm_l LEFT_ALT S    &hm_l LEFT_CONTROL D    &hm_shift_l LEFT_SHIFT F    &kp G                      &kp H         &hm_shift_r RIGHT_SHIFT J   &hm_r RIGHT_CONTROL K      &hm_r RIGHT_ALT L      &hm_r RIGHT_GUI SEMI       
+        //     &kp Z               &kp X               &kp C                   &kp V                       &kp B                      &kp N         &kp M                       &hm_shift_r APOS COMMA     &hm_shift_r EXCL DOT   &hm_shift_r BACKSLASH FSLH 
+        //                     &trans  &trans  &trans    &trans  &trans &trans
+        //     >;
+        // };
     };
 };
