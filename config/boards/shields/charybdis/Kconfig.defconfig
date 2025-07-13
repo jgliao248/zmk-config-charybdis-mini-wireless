@@ -12,9 +12,7 @@ if SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT
 
 config ZMK_SPLIT
 	default y
-	
-config PMW3610_INIT_POWER_UP_EXTRA_DELAY_MS
-    default 1000
 
-	
+
+
 endif
