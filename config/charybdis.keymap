@@ -1,9 +1,3 @@
-/*
- * eXsoR's Charybdis Nano Keymap
- * with trackball.
- *
-*/
-
 // Includes
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -63,9 +57,15 @@
         device = <&trackball>;
         input-processors = <&zip_xy_scaler 1 2>, <&zip_temp_layer 4 400>; // Switch to auto-mouse temp layer, decrease sensitivity
         scroll {
-            layers = <5>; // SCROLL
+            layers = <6>; // SCROLL
             input-processors = <&zip_xy_scaler 1 5>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
         };
+    };
+
+    msc {
+        acceleration-exponent = <0>;      // 0
+        time-to-max-speed-ms = <200>;     // 300
+        delay-ms = <5>;                   // 10
     };
     
     behaviors {
@@ -280,8 +280,8 @@
         mouse_layer {
             display-name = "MOU";
             bindings = <
-            &trans  &trans    &trans    &trans   &trans    &trans   &trans    &trans   &trans  &trans
-            &trans  &trans    &trans    &trans   &trans    &trans   &mkp MB1  &mkp MB2 &trans  &trans
+            &trans  &trans    &trans    &trans   &trans    &mkp MB4  &mkp MB5    &trans   &trans  &trans
+            &trans  &trans    &trans    &trans   &trans    &mkp MB1  &mkp MB2    &trans   &trans  &trans
             &trans  &mo SCR   &mo SNI   &trans   &trans    &trans   &trans    &trans   &trans  &trans
                                 &trans    &trans    &trans   &trans    &trans &trans
             >;
