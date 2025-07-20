@@ -165,16 +165,6 @@
 	    timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&mo FUN>;
-        }
-
-        LeftClickRight {
-            bindings = <&mkp LCLK>;
-            key-positions = <16 17>;
-        };
-
-        RightClickRight {
-            bindings = <&mkp RCLK>;
-            key-positions = <17 18>;
         };
 
         ParaLeft {
