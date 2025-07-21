@@ -57,8 +57,12 @@
         device = <&trackball>;
         input-processors = <&zip_xy_scaler 3 2>, <&zip_temp_layer 5 500>; // Switch to mouse temp layer
         scroll {
-            layers = <SCR>; // SCROLL
+            layers = <SCR>;
             input-processors = <&zip_xy_scaler 1 2>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
+        };
+        snipe {
+            layers = <SNI>;
+            input-processors = <&zip_xy_scaler 1 2>;
         };
         //todo: look into mapping mouse to arrow
     };
@@ -170,17 +174,32 @@
 
         LeftClickRight {
             bindings = <&mkp LCLK>;
-            key-positions = <16 17>;
+            key-positions = <15 16>;
         };
 
         RightClickRight {
             bindings = <&mkp RCLK>;
-            key-positions = <17 18>;
+            key-positions = <16 17>;
+        };
+
+        BackClickRight {
+            bindings = <&mkp MB4>;
+            key-positions = <5 6>;
+        };
+
+        ForwardClickRight {
+            bindings = <&mkp MB5>;
+            key-positions = <6 7>;
         };
 
         MiddleClickRight {
             bindings = <&tog SCR>;
-            key-positions = <16 17 18>;
+            key-positions = <15 16 17>;
+        };
+
+        SnipelickRight {
+            bindings = <&tog SNI>;
+            key-positions = <5 6 7>;
         };
 
         ParaLeft {
