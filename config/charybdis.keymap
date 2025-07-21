@@ -57,9 +57,10 @@
         device = <&trackball>;
         input-processors = <&zip_xy_scaler 3 2>, <&zip_temp_layer 5 500>; // Switch to mouse temp layer
         scroll {
-            layers = <6>; // SCROLL
+            layers = <SCR>; // SCROLL
             input-processors = <&zip_xy_scaler 1 2>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
         };
+        //todo: look into mapping mouse to arrow
     };
 
     msc {
@@ -167,6 +168,21 @@
             bindings = <&mo FUN>;
         };
 
+        LeftClickRight {
+            bindings = <&mkp LCLK>;
+            key-positions = <16 17>;
+        };
+
+        RightClickRight {
+            bindings = <&mkp RCLK>;
+            key-positions = <17 18>;
+        };
+
+        MiddleClickRight {
+            bindings = <&tog SCR>;
+            key-positions = <16 17 18>;
+        };
+
         ParaLeft {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <10 11>;
@@ -223,7 +239,7 @@
                 &kp Q               &kp W           &kp F               &kp P               &kp G                       &kp J                &kp L              &kp U               &kp Y           &mt GRAVE APOS
                 &mt LEFT_GUI A      &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T    &kp D                       &kp H                &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E &mt RIGHT_ALT I &mt RIGHT_GUI O
                 &kp Z               &kp X           &kp C               &kp V               &kp B                       &kp K                &kp M              &mt SEMI COMMA      &mt COLON DOT   &mt BSLH SLASH
-                                                    &lt NAV TAB         &kp ENTER           &mt LEFT_CONTROL DEL        &lt SMN BACKSPACE    &kp SPACE          &kp MINUS    
+                                                    &lt NAV TAB         &kp DEL           &mt LEFT_CONTROL ENTER        &lt SMN SPACE    &kp BACKSPACE          &kp MINUS    
             >;
         }; 
 
@@ -270,10 +286,10 @@
         mouse_layer {
             display-name = "MOU";
             bindings = <
-            &mo SCR  &trans    &kp UP    &trans   &trans    &mkp MB4  &mkp MB5    &msc MOVE_Y(20)   &trans  &trans
-            &trans  &kp LEFT  &kp DOWN  &kp RIGHT   &trans    &mkp MB1  &mkp MB2    &trans   &trans  &trans
-            &trans  &trans   &mo SNI   &trans   &trans    &trans   &trans    &trans   &trans  &trans
-                                &trans    &trans    &trans   &trans    &trans &trans
+            &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans &trans
             >;
         };
 
