@@ -307,8 +307,8 @@
             bindings = <
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &mkp LCLK  &mkp RCLK  &trans    &mo SCR &mkp LCLK  &mkp RCLK   &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans &trans
+            &trans  &trans  &trans  &trans  &trans    &mo SCR  &trans  &trans &trans  &trans
+                            &trans  &mkp LCLK  &mkp RCLK    &mkp LCLK  &mkp MCLK &trans
             >;
         };
 
@@ -327,8 +327,8 @@
             bindings = <
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &mkp LCLK  &mkp RCLK  &trans    &mo SCR &mkp LCLK  &mkp RCLK   &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans &trans
+            &trans  &trans  &trans  &trans  &trans    &mo SCR  &trans  &trans &trans  &trans
+                            &trans  &mkp LCLK  &mkp RCLK    &mkp LCLK  &mkp MCLK &trans
             >;
         };
 
