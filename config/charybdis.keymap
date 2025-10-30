@@ -52,10 +52,16 @@
 */
 
 / {
+ /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <1000>;
+    };   
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_xy_scaler 3 2>, <&zip_temp_layer 5 500>; // Switch to mouse temp layer
+        input-processors = <&zip_xy_scaler 3 2>, <&zip_temp_layer 5 1000>; // Switch to mouse temp layer
         scroll {
             layers = <SCR>;
             input-processors = <&zip_xy_scaler 1 2>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
@@ -161,6 +167,18 @@
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <200>;
         };
+
+         back_del: back_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_DEL_WHEN_SHIFTED";
+            #binding-cells = <0>;
+
+            // Default tap = Backspace; with Shift held = Delete
+            bindings = <&kp BSPC>, <&kp DEL>;
+
+            // Trigger on either left or right shift
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
     };
     
     combos {
@@ -258,7 +276,7 @@
                 &kp Q               &kp W           &kp F               &kp P               &kp G                       &kp J                &kp L              &kp U               &kp Y           &mt GRAVE APOS
                 &mt LEFT_GUI A      &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T    &kp D                       &kp H                &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E &mt RIGHT_ALT I &mt RIGHT_GUI O
                 &kp Z               &kp X           &kp C               &kp V               &kp B                       &kp K                &kp M              &mt SEMI COMMA      &mt COLON DOT   &mt BSLH SLASH
-                                                    &lt NAV TAB         &kp DEL           &mt LEFT_CONTROL ENTER        &lt SMN SPACE    &kp BACKSPACE          &kp MINUS    
+                                                    &lt NAV TAB         &kp DEL           &mt LEFT_CONTROL ENTER        &lt SMN SPACE    &back_del          &kp MINUS    
             >;
         }; 
 
