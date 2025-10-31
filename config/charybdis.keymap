@@ -61,7 +61,7 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_xy_scaler 3 2>, <&zip_temp_layer 5 1000>; // Switch to mouse temp layer
+        input-processors = <&zip_xy_scaler 3 2>, <&zip_temp_layer MOU 1500>; // Switch to mouse temp layer
         scroll {
             layers = <SCR>;
             input-processors = <&zip_xy_scaler 1 2>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
@@ -192,27 +192,27 @@
 
         LeftClickRight {
             bindings = <&mkp LCLK>;
-            key-positions = <15 16>;
+            key-positions = <26 27>;
         };
 
         RightClickRight {
             bindings = <&mkp RCLK>;
-            key-positions = <16 17>;
+            key-positions = <27 28>;
         };
 
         BackClickRight {
             bindings = <&mkp MB4>;
-            key-positions = <5 6>;
+            key-positions = <16 17>;
         };
 
         ForwardClickRight {
             bindings = <&mkp MB5>;
-            key-positions = <6 7>;
+            key-positions = <17 18>;
         };
 
         MiddleClickRight {
             bindings = <&tog SCR>;
-            key-positions = <15 16 17>;
+            key-positions = <16 17 18>;
         };
 
         SnipelickRight {
@@ -276,7 +276,7 @@
                 &kp Q               &kp W           &kp F               &kp P               &kp G                       &kp J                &kp L              &kp U               &kp Y           &mt GRAVE APOS
                 &mt LEFT_GUI A      &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T    &kp D                       &kp H                &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E &mt RIGHT_ALT I &mt RIGHT_GUI O
                 &kp Z               &kp X           &kp C               &kp V               &kp B                       &kp K                &kp M              &mt SEMI COMMA      &mt COLON DOT   &mt BSLH SLASH
-                                                    &lt NAV TAB         &kp DEL           &mt LEFT_CONTROL ENTER        &lt SMN SPACE    &back_del          &kp MINUS    
+                                                    &kp DEL             &lt NAV TAB         &mt LEFT_CONTROL ENTER        &lt SMN SPACE    &back_del          &kp MINUS    
             >;
         }; 
 
