@@ -193,6 +193,16 @@
       // Forward params: first goes to &kp (hold), second to &mkp (tap)
       bindings = <&kp>, <&mkp>;
     };
+
+    space_enter: space_enter {
+      compatible = "zmk,behavior-mod-morph";
+      label = "space_enter";
+      #binding-cells = <0>;
+
+      // Tap result: no-shift => SPACE, with-shift => ENTER
+      bindings = <&kp SPACE>, <&kp ENTER>;
+      mods = <(MOD_LSFT | MOD_RSFT)>;
+    };
     };
     
     combos {
@@ -290,7 +300,7 @@
                 &kp Q               &kp W           &kp F               &kp P               &kp G                       &kp J                &kp L              &kp U               &kp Y           &mt GRAVE APOS
                 &mt LEFT_GUI A      &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T    &kp D                       &kp H                &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E &mt RIGHT_ALT I &mt RIGHT_GUI O
                 &kp Z               &kp X           &kp C               &kp V               &kp B                       &kp K                &kp M              &mt SEMI COMMA      &mt COLON DOT   &mt BSLH SLASH
-                                                    &kp DEL             &lt NAV TAB         &mt LEFT_CONTROL ENTER        &lt SMN SPACE    &back_del          &kp MINUS    
+                                                    &kp DEL             &lt NAV TAB         &mt LEFT_CONTROL ENTER      &ht &mo SMN &space_enter    &back_del          &kp MINUS    
             >;
         }; 
 
