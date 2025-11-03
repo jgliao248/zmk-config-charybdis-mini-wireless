@@ -298,8 +298,8 @@
         };
 
         EnterCombo {
-            bindings <&kp ENTER>
-            key-positions = <31 32>
+            bindings <&kp ENTER>;
+            key-positions = <31 32>;
         }
 
     };
