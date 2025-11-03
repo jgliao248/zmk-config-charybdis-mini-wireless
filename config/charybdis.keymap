@@ -203,6 +203,14 @@
       bindings = <&kp SPACE>, <&kp ENTER>;
       mods = <(MOD_LSFT | MOD_RSFT)>;
     };
+
+    right_space: right_space {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&space_enter>;
+        };
     };
     
     combos {
@@ -289,6 +297,11 @@
             key-positions = <0 9>;
         };
 
+        EnterCombo {
+            bindings <&kp ENTER>
+            key-positions = <31 32>
+        }
+
     };
 
     keymap {
@@ -300,7 +313,7 @@
                 &kp Q               &kp W           &kp F               &kp P               &kp G                       &kp J                &kp L              &kp U               &kp Y           &mt GRAVE APOS
                 &mt LEFT_GUI A      &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T    &kp D                       &kp H                &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E &mt RIGHT_ALT I &mt RIGHT_GUI O
                 &kp Z               &kp X           &kp C               &kp V               &kp B                       &kp K                &kp M              &mt SEMI COMMA      &mt COLON DOT   &mt BSLH SLASH
-                                                    &kp DEL             &lt NAV TAB         &mt LEFT_CONTROL ENTER      &ht &mo SMN &space_enter    &back_del          &kp MINUS    
+                                                    &kp DEL             &lt NAV TAB         &mt LEFT_CONTROL ENTER      &right_space    &back_del          &kp MINUS    
             >;
         }; 
 
