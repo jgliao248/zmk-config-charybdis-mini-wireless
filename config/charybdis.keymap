@@ -244,7 +244,7 @@
 
         MiddleClickRight {
             bindings = <&tog SCR>;
-            key-positions = <16 17 18>;
+            key-positions = <26 27 28>;
         };
 
         SnipelickRight {
@@ -313,7 +313,7 @@
                 &kp Q               &kp W           &kp F               &kp P               &kp G                       &kp J                &kp L              &kp U               &kp Y           &mt GRAVE APOS
                 &mt LEFT_GUI A      &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T    &kp D                       &kp H                &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E &mt RIGHT_ALT I &mt RIGHT_GUI O
                 &kp Z               &kp X           &kp C               &kp V               &kp B                       &kp K                &kp M              &mt SEMI COMMA      &mt COLON DOT   &mt BSLH SLASH
-                                                    &kp DEL             &lt NAV TAB         &mt LEFT_CONTROL ENTER      &right_space SMN   &back_del          &back_del 
+                                                    &kp DEL             &lt NAV TAB         &mt LEFT_CONTROL ENTER      &lt SMN SPACE  &back_del          &back_del 
             >;
         }; 
 
@@ -363,7 +363,7 @@
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &mo SCR  &trans  &trans &trans  &trans
-                            &trans  &mkp LCLK  &mkp_tap_kp_hold LCTRL RCLK    &mkp LCLK  &mkp MCLK &trans
+                            &trans  &mkp LCLK  &mkp_tap_kp_hold LCTRL RCLK    &trans  &trans &trans
             >;
         };
 
@@ -383,7 +383,7 @@
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans    &mo SCR  &trans  &trans &trans  &trans
-                            &trans  &mkp LCLK  &mkp RCLK    &mkp LCLK  &mkp MCLK &trans
+                             &trans  &mkp LCLK  &mkp_tap_kp_hold LCTRL RCLK    &trans  &trans &trans
             >;
         };
 
